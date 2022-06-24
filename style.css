@@ -6,3 +6,49 @@ body {
     color: lightslategray;
     text-align: center;
 }
+
+h1, h2, h3, h4 {
+    font-family: 'Parisienne', cursive;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+h2 {
+    background-color: orange;
+    color: darkolivegreen;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+h2.active {
+    background-color: darkolivegreen;
+    color: orange;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav {
+    cursor: pointer;
+}
+
+.lists {
+    position: relative;
+}
+
+.list {
+    display: none;
+}
+
+.list.active {
+    display: block;
+}
