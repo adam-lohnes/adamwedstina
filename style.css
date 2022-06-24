@@ -29,7 +29,7 @@ body {
     background-blend-mode: luminosity; */
     box-sizing: border-box;
     max-width: 420px;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     padding: 0 10px 100px;
     box-shadow: 0 0 50px var(--page-shadow);
@@ -62,7 +62,7 @@ h1 {
 }
 
 h2.nav {
-    border: 3px solid var(--inactive-card);
+    border: 3px double var(--inactive-card);
     background-color: var(--body-bg);
     border-bottom: none;
     color: var(--inactive-text);
@@ -75,7 +75,7 @@ h2.nav {
 }
 
 h2.nav.active {
-    border: 3px solid var(--active-card);
+    border: 3px double var(--active-card);
     border-bottom: none;
     background-color: var(--active-card-bg);
     color: var(--active-text);
@@ -99,6 +99,10 @@ h2.category.first {
     margin-top: 5px;
 }
 
+h2.category.time {
+    text-align: left;
+}
+
 h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -109,14 +113,15 @@ h3 {
     color: var(--dark-text);
 }
 
-.food-description {
+.description {
     text-transform: lowercase;
 }
 
 h4 {
-    font-family: 'PT Serif', serif;;
+    font-family: 'Quicksand', sans-serif;
     font-size: 22px;
     text-transform: unset;
+    margin-bottom: 5px;
 }
 
 p {
@@ -134,7 +139,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2px;
     position: relative;
     top: 6px;
 }
@@ -146,7 +150,7 @@ ul {
 
 .list {
     display: none;
-    border: 3px solid var(--active-card);
+    border: 3px double var(--active-card);
     border-radius: 0 0 20px 20px;
     background-color: var(--active-card-bg);
     color: var(--active-text);
@@ -156,6 +160,11 @@ ul {
 
 .list.active {
     display: block;
+}
+
+.orange {
+    width: 70px;
+    margin-bottom: 30px;
 }
 
 footer {
@@ -170,4 +179,5 @@ footer {
     bottom: 0px;
     left: calc(50vw - (420px/2));
     padding: 10px 0;
+    z-index: 10;
 }
