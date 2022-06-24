@@ -1,54 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Parisienne&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=PT+Serif&family=Quicksand:wght@300&display=swap');
+
+:root {
+    --page-bg: bisque;
+    --body-bg: antiquewhite;
+    --page-shadow: sienna;
+    --main-text: lightslategray;
+    --dark-text: #474F2E;
+    --active-card: forestgreen;
+    --active-card-bg: bisque;
+    --active-text: sienna;
+    --inactive-card: darkorange;
+    --inactive-text: orange;
+    --footer-bg: #341C00;
+}
+
+html {
+    font-family: 'Kalam', cursive;
+    background-color: var(--page-bg);
+    color: var(--main-text);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: 'Kalam', cursive;
-    background-color: bisque;
-    color: lightslategray;
-    text-align: center;
+    background-color: var(--body-bg);
+    /* background-image: url('./img/paper1.jpg');
+    background-blend-mode: luminosity; */
+    box-sizing: border-box;
+    max-width: 420px;
+    height: 100vh;
+    margin: auto;
+    padding: 0 10px 100px;
+    box-shadow: 0 0 50px var(--page-shadow);
+}
+
+.header-img {
+    aspect-ratio: 2.32;
+    max-width: 420px;
+    background-color: var(--body-bg);
+    background-image: url(./img/orange-branch.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    position: relative;
+    top: -60px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Parisienne', cursive;
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
     padding: 0;
     margin: 0;
     user-select: none;
 }
 
-h2 {
-    background-color: orange;
-    color: darkolivegreen;
-    font-size: 20px;
-    padding: 10px 20px;
+h1 {
+    font-size: 36px;
+    position: relative;
+    top: -30px;
 }
 
-h2.active {
-    background-color: darkolivegreen;
-    color: orange;
+h2.nav {
+    border: 3px solid var(--inactive-card);
+    background-color: var(--body-bg);
+    border-bottom: none;
+    color: var(--inactive-text);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 1px 1px 9px var(--page-shadow) inset;
+    cursor: pointer;
+    width: 50%;
+}
+
+h2.nav.active {
+    border: 3px solid var(--active-card);
+    border-bottom: none;
+    background-color: var(--active-card-bg);
+    color: var(--active-text);
+    box-shadow: 0px -3px 3px var(--page-shadow);
+    position: relative;
+    top: -3px;
+    z-index: 1;
+}
+
+h2.category {
+    color: var(--active-text);
+    font-size: 22px;
+    border-bottom: 1px solid var(--dark-text);
+    margin-bottom: 5px;
+    width: fit-content;
+    padding: 5px 50px;
+    margin: 25px auto 5px;
+}
+
+h2.category.first {
+    margin-top: 5px;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.food {
+    color: var(--dark-text);
+}
+
+.food-description {
+    text-transform: lowercase;
+}
+
+h4 {
+    font-family: 'PT Serif', serif;;
+    font-size: 22px;
+    text-transform: unset;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-}
-
-.nav {
-    cursor: pointer;
+    gap: 2px;
+    position: relative;
+    top: 6px;
 }
 
 .lists {
     position: relative;
+    padding-bottom: 100px;
 }
 
 .list {
     display: none;
+    border: 3px solid var(--active-card);
+    border-radius: 0 0 20px 20px;
+    background-color: var(--active-card-bg);
+    color: var(--active-text);
+    padding: 30px 10px;
+    box-shadow: 0px 3px 9px var(--page-shadow);
 }
 
 .list.active {
     display: block;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    background-color: var(--footer-bg);
+    color: var(--active-card-bg);
+    position: fixed;
+    bottom: 0px;
+    left: calc(50vw - (420px/2));
+    padding: 10px 0;
 }
