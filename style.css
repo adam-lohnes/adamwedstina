@@ -99,18 +99,18 @@ h2.category.first {
     margin-top: 5px;
 }
 
-h2.category.time {
-    text-align: left;
-}
-
 h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.food {
+.title {
     color: var(--dark-text);
+}
+
+.time {
+    color: var(--active-text);
 }
 
 .description {
@@ -165,6 +165,10 @@ ul {
 .orange {
     width: 70px;
     margin-bottom: 30px;
+}
+
+.banana {
+    width: 150px;
 }
 
 footer {
